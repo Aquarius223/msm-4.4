@@ -332,8 +332,12 @@ static irqreturn_t fpc1020_irq_handler(int irq, void *dev_id)
 	** since this is interrupt context (other thread...) */
 	smp_rmb();
 
-	if (f->screen_off && f->wakeup_enabled)
-		pm_wakeup_event(f->dev, FPC_TTW_HOLD_TIME_MS);
+	if (f->screen_off) {
+		if(f->wakeup_enabled)
+			pm_wakeup_event(f->dev, FPC_TTW_HOLD_TIME_MS);
+		else
+			return IRQ_HANDLED;
+	}
 
 	sysfs_notify(&f->dev->kobj, NULL, dev_attr_irq.attr.name);
 
