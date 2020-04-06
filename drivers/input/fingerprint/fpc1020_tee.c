@@ -571,7 +571,8 @@ static int fpc1020_sys_suspend(struct device *dev)
 {
 	struct fpc1020_data *f = dev_get_drvdata(dev);
 
-	enable_irq_wake(gpio_to_irq(f->irq_gpio));
+	if(f->wakeup_enabled)
+		enable_irq_wake(gpio_to_irq(f->irq_gpio));
 	return 0;
 }
 
