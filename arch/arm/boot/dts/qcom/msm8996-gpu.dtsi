@@ -180,7 +180,7 @@
 
 			qcom,gpu-pwrlevel@0 {
 				reg = <0>;
-				qcom,gpu-freq = <480000000>;
+				qcom,gpu-freq = <710000000>;
 				qcom,bus-freq = <11>;
 				qcom,bus-min = <10>;
 				qcom,bus-max = <11>;
