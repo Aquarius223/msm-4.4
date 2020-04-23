@@ -435,7 +435,7 @@ static struct clk_freq_tbl ftbl_csi0_clk_src_v2[] = {
 	F_MM( 200000000,     mmsscc_gpll0,    3,    0,     0),
 	F_MM( 320000000,  mmpll4_out_main,    3,    0,     0),
 	F_MM( 480000000,  mmpll4_out_main,    2,    0,     0),
-	F_MM( 600000000,     mmsscc_gpll0,    1,    0,     0),
+	F_MM( 710000000,     mmsscc_gpll0,    1,    0,     0),
 	F_END
 };
 
@@ -445,7 +445,7 @@ static struct clk_freq_tbl ftbl_csi0_clk_src_v3[] = {
 	F_MM( 266666667,  mmpll0_out_main,    3,    0,     0),
 	F_MM( 320000000,  mmpll4_out_main,    3,    0,     0),
 	F_MM( 480000000,  mmpll4_out_main,    2,    0,     0),
-	F_MM( 600000000,     mmsscc_gpll0,    1,    0,     0),
+	F_MM( 710000000,     mmsscc_gpll0,    1,    0,     0),
 	F_END
 };
 
